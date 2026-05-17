@@ -440,11 +440,6 @@ left:100%;
 transform:translateY(-5px) scale(1.05);
 }
 
-.preview-btn{
-background:linear-gradient(45deg,#2196f3,#3f51b5);
-color:#fff;
-}
-
 .submit-btn{
 background:linear-gradient(45deg,#4caf50,#009688);
 color:#fff;
@@ -953,11 +948,11 @@ Attach Car
 
 </div>
 
-<div class="input-box">
+<div class="input-box" id="hourlyPackageBox">
 
 <label>Hourly Rental Package</label>
 
-<select>
+<select id="hourlyPackage">
 
 <option>4hrs/40km</option>
 <option>6hrs/60km</option>
@@ -968,7 +963,6 @@ Attach Car
 </select>
 
 </div>
-
 <div class="input-box">
 
 <label>Pickup Location</label>
@@ -1057,11 +1051,6 @@ Attach Car
 
 <div class="btn-group">
 
-<button type="button" class="btn preview-btn"
-onclick="alert('Please verify your details before submit.')">
-Preview
-</button>
-
 <button type="button" class="btn submit-btn" onclick="sendWhatsApp()">
 Submit
 </button>
@@ -1132,10 +1121,6 @@ Reset
 </div>
 
 <div class="btn-group">
-
-<button class="btn preview-btn" type="button">
-Preview
-</button>
 
 <button class="btn submit-btn" type="submit">
 Submit
@@ -1218,10 +1203,6 @@ Reset
 </div>
 
 <div class="btn-group">
-
-<button class="btn preview-btn" type="button">
-Preview
-</button>
 
 <button class="btn submit-btn" type="submit">
 Submit
