@@ -1691,22 +1691,94 @@ new Date().toISOString().slice(0,16);
 
 function sendWhatsApp(){
 
-let name = document.querySelector("input[type='text']").value;
-let pickup = document.querySelectorAll("input[type='text']")[1].value;
-let destination = document.querySelectorAll("input[type='text']")[2].value;
+let serviceType =
+document.getElementById("serviceType").value;
 
-let msg = `🚖 New Booking Request
-Name: ${name}
-Pickup: ${pickup}
-Destination: ${destination}
+let hourlyPackage =
+document.getElementById("hourlyPackage").value;
+
+let outstationType =
+document.getElementById("outstationType").value;
+
+let pickupLocation =
+document.getElementById("pickupLocation").value;
+
+let destination =
+document.getElementById("destination").value;
+
+let morePlaces =
+document.getElementById("morePlaces").value;
+
+let passengers =
+document.getElementById("passengerCount").value;
+
+let carSelection =
+document.getElementById("carSelection").value;
+
+let pickupDate =
+document.getElementById("pickupDate").value;
+
+let returnDate =
+document.getElementById("returnDate").value;
+
+let customerName =
+document.getElementById("customerName").value;
+
+let customerPhone =
+document.getElementById("customerPhone").value;
+
+let otherInfo =
+document.getElementById("otherInfo").value;
+
+let msg = `🚖 *New Booking Request*
+
+🔹 Service Type: ${serviceType}
+
+🔹 Hourly Rental Package:
+${serviceType === 'Local' ? hourlyPackage : 'N/A'}
+
+🔹 Outstation Type:
+${serviceType === 'Outstation' ? outstationType : 'N/A'}
+
+📍 Pickup Location:
+${pickupLocation}
+
+📍 Destination:
+${destination}
+
+📍 Add More Places:
+${morePlaces || 'N/A'}
+
+👥 No. of Passengers:
+${passengers}
+
+🚘 Car Selection:
+${carSelection}
+
+📅 Pickup Date & Time:
+${pickupDate}
+
+📅 Return Date & Time:
+${returnDate || 'N/A'}
+
+👤 Customer Name:
+${customerName}
+
+📞 Customer Contact Number:
+${customerPhone}
+
+📝 Any Other Information:
+${otherInfo || 'N/A'}
 
 Please confirm booking.`;
 
-let url = "https://wa.me/919007350757?text=" + encodeURIComponent(msg);
+let url =
+"https://wa.me/919007350757?text=" +
+encodeURIComponent(msg);
 
 window.open(url, "_blank");
-}
 
+}
 /* VISITORS COUNT */
 
 let count = localStorage.getItem("visits") || 0;
