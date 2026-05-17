@@ -838,9 +838,9 @@
               </select>
             </div>
             
-            <div class="input-box">
+            <div class="input-box" id="hourlyPackageBox">
               <label>Hourly Rental Package</label>
-              <select>
+              <select id="hourlyPackageBox">
                 <option>6hrs/60km</option>
                 <option>8hrs/80km</option>
                 <option>10hrs/100km</option>
@@ -850,17 +850,17 @@
             
             <div class="input-box">
               <label>Pickup Location</label>
-              <input type="text">
+              <input type="text" id="pickupLocation">
             </div>
             
             <div class="input-box">
               <label>Destination</label>
-              <input type="text">
+              <input type="text" id="destination">
             </div>
             
             <div class="input-box" id="addPlaceBox">
               <label>Add More Places</label>
-              <input type="text">
+              <input type="text" id="morePlaces">
             </div>
             
             <div class="input-box">
@@ -882,22 +882,22 @@
             
             <div class="input-box" id="returnBox" style="display:none;">
               <label>Return Date & Time</label>
-              <input type="datetime-local">
+              <input type="datetime-local" id="returnDate">
             </div>
             
             <div class="input-box">
               <label>Customer Name</label>
-              <input type="text">
+              <input type="text" id="customerName">
             </div>
             
             <div class="input-box">
               <label>Customer Contact Number</label>
-              <input type="tel" placeholder="+91">
+              <input type="tel" placeholder="+91" id="customerPhone">
             </div>
             
             <div class="input-box" style="grid-column:1/-1;">
               <label>Any Other Information</label>
-              <textarea></textarea>
+              <textarea id="otherInfo"></textarea>
             </div>
           </div>
           
@@ -1244,23 +1244,52 @@
       }
       
       /* SERVICE TYPE */
-      const serviceType = document.getElementById('serviceType');
-      const outstationTypeBox = document.getElementById('outstationTypeBox');
-      const addPlaceBox = document.getElementById('addPlaceBox');
-      serviceType.addEventListener('change',()=>{
-        if(serviceType.value === 'Outstation'){
-          outstationTypeBox.style.display='block';
-          addPlaceBox.style.display='block';
-        }
-        else if(serviceType.value === 'Local'){
-          outstationTypeBox.style.display='none';
-          addPlaceBox.style.display='none';
-        }
-        else{
-          outstationTypeBox.style.display='none';
-          addPlaceBox.style.display='block';
-        }
-      });
+
+const serviceType =
+document.getElementById('serviceType');
+
+const outstationTypeBox =
+document.getElementById('outstationTypeBox');
+
+const addPlaceBox =
+document.getElementById('addPlaceBox');
+
+const hourlyPackageBox =
+document.getElementById('hourlyPackageBox');
+
+serviceType.addEventListener('change',()=>{
+
+if(serviceType.value === 'Outstation'){
+
+outstationTypeBox.style.display='block';
+
+addPlaceBox.style.display='block';
+
+hourlyPackageBox.style.display='none';
+
+}
+
+else if(serviceType.value === 'Local'){
+
+outstationTypeBox.style.display='none';
+
+addPlaceBox.style.display='none';
+
+hourlyPackageBox.style.display='block';
+
+}
+
+else{
+
+outstationTypeBox.style.display='none';
+
+addPlaceBox.style.display='block';
+
+hourlyPackageBox.style.display='none';
+
+}
+
+});
       
       /* ROUNDTRIP */
       const outstationType =
@@ -1358,18 +1387,95 @@
       
       /* WHATSAPP AUTO BOOKING MESSEGE */
       function sendWhatsApp(){
-        let name = document.querySelector("input[type='text']").value;
-        let pickup = document.querySelectorAll("input[type='text']")[1].value;
-        let destination = document.querySelectorAll("input[type='text']")[2].value;
-        
-        let msg = 🚖 New Booking Request
-        Name: ${name}
-        Pickup: ${pickup}
-        Destination: ${destination}
-        Please confirm booking.;
-        let url = "https://wa.me/919007350757?text=" + encodeURIComponent(msg);
-        window.open(url, "_blank");
-      }
+
+let serviceType =
+document.getElementById("serviceType").value;
+
+let hourlyPackage =
+document.getElementById("hourlyPackage").value;
+
+let outstationType =
+document.getElementById("outstationType").value;
+
+let pickupLocation =
+document.getElementById("pickupLocation").value;
+
+let destination =
+document.getElementById("destination").value;
+
+let morePlaces =
+document.getElementById("morePlaces").value;
+
+let passengers =
+document.getElementById("passengerCount").value;
+
+let carSelection =
+document.getElementById("carSelection").value;
+
+let pickupDate =
+document.getElementById("pickupDate").value;
+
+let returnDate =
+document.getElementById("returnDate").value;
+
+let customerName =
+document.getElementById("customerName").value;
+
+let customerPhone =
+document.getElementById("customerPhone").value;
+
+let otherInfo =
+document.getElementById("otherInfo").value;
+
+let msg = `🚖 *New Booking Request*
+
+🔹 Service Type: ${serviceType}
+
+🔹 Hourly Rental Package:
+${serviceType === 'Local' ? hourlyPackage : 'N/A'}
+
+🔹 Outstation Type:
+${serviceType === 'Outstation' ? outstationType : 'N/A'}
+
+📍 Pickup Location:
+${pickupLocation}
+
+📍 Destination:
+${destination}
+
+📍 Add More Places:
+${morePlaces || 'N/A'}
+
+👥 No. of Passengers:
+${passengers}
+
+🚘 Car Selection:
+${carSelection}
+
+📅 Pickup Date & Time:
+${pickupDate}
+
+📅 Return Date & Time:
+${returnDate || 'N/A'}
+
+👤 Customer Name:
+${customerName}
+
+📞 Customer Contact Number:
+${customerPhone}
+
+📝 Any Other Information:
+${otherInfo || 'N/A'}
+
+Please confirm booking.`;
+
+let url =
+"https://wa.me/919007350757?text=" +
+encodeURIComponent(msg);
+
+window.open(url, "_blank");
+
+}
       
       /* VISITORS COUNT */
       let count = localStorage.getItem("visits") || 0;
