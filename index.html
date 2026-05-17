@@ -1497,13 +1497,17 @@ event.target.classList.add('active');
 
 /* SERVICE TYPE */
 
-const serviceType = document.getElementById('serviceType');
+const serviceType =
+document.getElementById('serviceType');
 
 const outstationTypeBox =
 document.getElementById('outstationTypeBox');
 
 const addPlaceBox =
 document.getElementById('addPlaceBox');
+
+const hourlyPackageBox =
+document.getElementById('hourlyPackageBox');
 
 serviceType.addEventListener('change',()=>{
 
@@ -1513,22 +1517,31 @@ outstationTypeBox.style.display='block';
 
 addPlaceBox.style.display='block';
 
-}else if(serviceType.value === 'Local'){
+hourlyPackageBox.style.display='none';
+
+}
+
+else if(serviceType.value === 'Local'){
 
 outstationTypeBox.style.display='none';
 
 addPlaceBox.style.display='none';
 
-}else{
+hourlyPackageBox.style.display='block';
+
+}
+
+else{
 
 outstationTypeBox.style.display='none';
 
 addPlaceBox.style.display='block';
 
+hourlyPackageBox.style.display='none';
+
 }
 
-});
-/* ROUNDTRIP */
+});/* ROUNDTRIP */
 
 const outstationType =
 document.getElementById('outstationType');
