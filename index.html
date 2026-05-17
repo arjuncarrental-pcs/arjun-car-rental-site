@@ -819,7 +819,7 @@
         <p>Book Ride, School Pool & Attach Car</p>
       </div> <div class="form-tabs">
         
-        <button class="tab-btn active" onclick="openTab('ride')"> Book Ride </button>
+        <button class="tab-btn active" onclick="openTab('ride', this)"> Book Ride </button>
         <button class="tab-btn" onclick="openTab('school')"> School Pool Service </button>
         <button class="tab-btn" onclick="openTab('attach')"> Attach Car </button>
       </div>
@@ -1218,6 +1218,7 @@
         <i class="fa-solid fa-phone"></i>
         <a href="tel:+919007350757">09007350757</a>
       </p>
+      
       <div style="text-align:center;font-weight:600;margin-top:20px;">
         👁 Visitors:
         <span id="visitorCount"></span>
@@ -1238,7 +1239,7 @@
     
     <script>
       /* TAB */
-      function openTab(tabId)
+      function openTab(tabId, element)
         document.querySelectorAll('.form-box').forEach(box=>{
           box.classList.remove('active');
         });
@@ -1249,7 +1250,7 @@
       
       document.getElementById(tabId).classList.add('active');
       
-      event.target.classList.add('active');
+      element.classList.add('active');
       }
       
       /* SERVICE TYPE */
@@ -1400,11 +1401,21 @@ hourlyPackageBox.style.display='none';
 let serviceType =
 document.getElementById("serviceType").value;
 
+let hourlyPackageElement =
+document.getElementById("hourlyPackage");
+
 let hourlyPackage =
-document.getElementById("hourlyPackage").value;
+hourlyPackageElement ?
+hourlyPackageElement.value :
+"N/A";
+
+let outstationTypeElement =
+document.getElementById("outstationType");
 
 let outstationType =
-document.getElementById("outstationType").value;
+outstationTypeElement ?
+outstationTypeElement.value :
+"N/A";
 
 let pickupLocation =
 document.getElementById("pickupLocation").value;
@@ -1424,8 +1435,13 @@ document.getElementById("carSelection").value;
 let pickupDate =
 document.getElementById("pickupDate").value;
 
+let returnDateElement =
+document.getElementById("returnDate");
+
 let returnDate =
-document.getElementById("returnDate").value;
+returnDateElement ?
+returnDateElement.value :
+"N/A";
 
 let customerName =
 document.getElementById("customerName").value;
@@ -1438,7 +1454,8 @@ document.getElementById("otherInfo").value;
 
 let msg = `🚖 *New Booking Request*
 
-🔹 Service Type: ${serviceType}
+🔹 Service Type:
+${serviceType}
 
 🔹 Hourly Rental Package:
 ${serviceType === 'Local' ? hourlyPackage : 'N/A'}
@@ -1486,11 +1503,18 @@ window.open(url, "_blank");
 
 }
       
-      /* VISITORS COUNT */
-      let count = localStorage.getItem("visits") || 0;
-      count++; localStorage.setItem("visits", count);
-      document.getElementById("visitorCount").innerText = count;
-    </script>
+    /* REAL VISITOR COUNTER */
+
+fetch("https://api.countapi.xyz/hit/arjuncarrental/visits")
+
+.then((res)=>res.json())
+
+.then((data)=>{
+
+document.getElementById("visitorCount").innerText =
+data.value;
+
+});
   
   </body>
 </html>
