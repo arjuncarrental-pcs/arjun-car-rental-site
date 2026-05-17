@@ -967,7 +967,7 @@ Attach Car
 
 <label>Pickup Location</label>
 
-<input type="text">
+<input type="text" id="pickuplocation">
 
 </div>
 
@@ -975,7 +975,7 @@ Attach Car
 
 <label>Destination</label>
 
-<input type="text">
+<input type="text" id="destination">
 
 </div>
 
@@ -983,7 +983,7 @@ Attach Car
 
 <label>Add More Places</label>
 
-<input type="text">
+<input type="text" id="morePlaces">
 
 </div>
 
@@ -1019,7 +1019,7 @@ Attach Car
 
 <label>Return Date & Time</label>
 
-<input type="datetime-local">
+<input type="datetime-local" id="returnDate">
 
 </div>
 
@@ -1027,7 +1027,7 @@ Attach Car
 
 <label>Customer Name</label>
 
-<input type="text">
+<input type="text" id="customerName">
 
 </div>
 
@@ -1035,7 +1035,7 @@ Attach Car
 
 <label>Customer Contact Number</label>
 
-<input type="tel" placeholder="+91">
+<input type="tel" placeholder="+91" id="customerPhone">
 
 </div>
 
@@ -1043,8 +1043,7 @@ Attach Car
 
 <label>Any Other Information</label>
 
-<textarea></textarea>
-
+<textarea id="otherInfo"></textarea>
 </div>
 
 </div>
@@ -1529,7 +1528,6 @@ addPlaceBox.style.display='block';
 }
 
 });
-
 /* ROUNDTRIP */
 
 const outstationType =
