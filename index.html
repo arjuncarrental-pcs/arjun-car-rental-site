@@ -17,7 +17,8 @@
 <!-- Open Graph (Social SEO) -->
 <meta property="og:title" content="Best Taxi Service in Kolkata | ARJUN CAR RENTAL">
 <meta property="og:description" content="Book Local, Airport & Outstation Taxi in Kolkata. Affordable & Reliable Service.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1503376780353-7e6692767b70">
+<meta property="og:image"
+content="https://arjuncarrental-pcs.github.io/arjun-car-rental-site/images/ACRlogo.jpg">
 <meta property="og:type" content="website">
 
 <!-- Schema Markup (Google Ranking Boost) -->
@@ -41,7 +42,13 @@
 }
 </script>
 
-<title>ARJUN CAR RENTAL | Executive Taxi Service Kolkata</title>
+<title>
+ARJUN CAR RENTAL | Executive Taxi Service Howrah Kolkata
+</title>
+
+<link rel="icon"
+type="image/png"
+href="images/ACRlogo.jpg">
 
 <meta name="description" content="Premium Taxi Service in Kolkata. Local Rental, Airport Pickup, Outstation, Tempo Traveller, Bus Rental, School Pool Service and Executive Taxi Service.">
 
@@ -167,7 +174,7 @@ background:linear-gradient(45deg,#ff9800,#ff5722);
 min-height:100vh;
 background:
 linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
-url('images/ACRlogo.jpg');
+url('images/carimage1.jpg');
 background-size:cover;
 background-position:center;
 display:flex;
@@ -637,7 +644,8 @@ font-size:30px;
 
 <div class="logo">
 
-<img src="images/ACRlogo.jpg">
+<img src="images/ACRlogo.jpg"
+alt="ARJUN CAR RENTAL Logo">
 
 <h1>
 ARJUN CAR RENTAL <br>
@@ -653,7 +661,7 @@ ARJUN CAR RENTAL <br>
 Call Now
 </a>
 
-<a href="https://wa.me/919007350757" target="_blank">
+<a href="https://wa.me/919007350757" target="_blank" rel="noopener noreferrer">
 <i class="fa-brands fa-whatsapp"></i>
 WhatsApp
 </a>
@@ -727,7 +735,7 @@ Book Your Ride
 
 <div class="about-img">
 
-<img src="images/carimagelogo.png">
+<img src="images/carimagelogo.png" alt="Car Image With Branding" >
 
 </div>
 
@@ -768,7 +776,7 @@ Affordable Pricing and 24x7 Support.
 <div class="slide-track">
 
 <div class="card">
-<img src="images/toursimage.jpg">
+<img src="images/toursimage.jpg" alt="Sedan Car Rental Kolkata" >
 <div class="card-content">
 <h3>Sedan Car</h3>
 <p>Swift Dzire</p>
@@ -777,7 +785,7 @@ Affordable Pricing and 24x7 Support.
 
 
 <div class="card">
-<img src="images/xcentplainfront.jpg">
+<img src="images/xcentplainfront.jpg" alt="Sedan Car Rental Kolkata" >
 <div class="card-content">
 <h3>Sedan Car</h3>
 <p>Hyundai Xcent</p>
@@ -785,7 +793,7 @@ Affordable Pricing and 24x7 Support.
 </div>
 
 <div class="card">
-<img src="images/ertiganewfrontwhite.jpg">
+<img src="images/ertiganewfrontwhite.jpg" alt="Ertiga Car Rental Kolkata" >
 <div class="card-content">
 <h3>SUV Car</h3>
 <p>Maruti Ertiga</p>
@@ -793,7 +801,7 @@ Affordable Pricing and 24x7 Support.
 </div>
 
 <div class="card">
-<img src="images/4590innovafront.jpg">
+<img src="images/4590innovafront.jpg" alt="Innova Car Rental Kolkata" >
 <div class="card-content">
 <h3>SUV Car</h3>
 <p>Innova</p>
@@ -802,7 +810,7 @@ Affordable Pricing and 24x7 Support.
 
 
 <div class="card">
-<img src="images/scorpioside.jpg">
+<img src="images/scorpioside.jpg" alt="Scorpio Car Rental Kolkata" >
 <div class="card-content">
 <h3>SUV Car</h3>
 <p>Mahindra Scorpio</p>
@@ -810,7 +818,7 @@ Affordable Pricing and 24x7 Support.
 </div>
 
 <div class="card">
-<img src="images/13,17,26seatertraveler.png">
+<img src="images/13,17,26seatertraveler.png" alt="Tenpo Traveller Rental Kolkata" >
 <div class="card-content">
 <h3>13 and 17 Seater</h3>
 <p> Tempo Traveller Service</p>
@@ -818,7 +826,7 @@ Affordable Pricing and 24x7 Support.
 </div>
 
 <div class="card">
-<img src="images/26seater2419frontside.jpg">
+<img src="images/26seater2419frontside.jpg" alt="Tempo Traveller Rental Kolkata" >
 <div class="card-content">
 <h3>26 Seater</h3>
 <p>Tempo Traveller Service</p>
@@ -826,7 +834,7 @@ Affordable Pricing and 24x7 Support.
 </div>
 
 <div class="card">
-<img src="images/35seaterbus.jpg">
+<img src="images/35seaterbus.jpg" alt="Bus Rental Kolkata" >
 <div class="card-content">
 <h3>35 Seater Bus</h3>
 <p>Executive Bus Rental</p>
@@ -913,15 +921,15 @@ Affordable Pricing and 24x7 Support.
 
 <div class="form-tabs">
 
-<button class="tab-btn active" onclick="openTab('ride')">
+<button class="tab-btn active" onclick="openTab(event,'ride')">
 Book Ride
 </button>
 
-<button class="tab-btn" onclick="openTab('school')">
+<button class="tab-btn" onclick="openTab(event,'school')">
 School Pool Service
 </button>
 
-<button class="tab-btn" onclick="openTab('attach')">
+<button class="tab-btn" onclick="openTab(event,'attach')">
 Attach Car
 </button>
 
@@ -966,7 +974,7 @@ Attach Car
 
 <label>Hourly Rental Package</label>
 
-<select>
+<select id="hourlyPackage">
 
 <option>6hrs/60km</option>
 <option>8hrs/80km</option>
@@ -981,7 +989,7 @@ Attach Car
 
 <label>Pickup Location</label>
 
-<input type="text">
+<input type="text" id="pickupLocation">
 
 </div>
 
@@ -989,7 +997,7 @@ Attach Car
 
 <label>Destination</label>
 
-<input type="text">
+<input type="text" id="destination">
 
 </div>
 
@@ -1041,7 +1049,7 @@ Attach Car
 
 <label>Customer Name</label>
 
-<input type="text">
+<input type="text" id="customerName">
 
 </div>
 
@@ -1049,7 +1057,7 @@ Attach Car
 
 <label>Customer Contact Number</label>
 
-<input type="tel" placeholder="+91">
+<input type="tel" id="customerPhone" placeholder="+91">
 
 </div>
 
@@ -1392,7 +1400,7 @@ I recommend this cab service who are visiting Kolkata 👍</p>
 
 <div style="text-align:center;margin-top:20px;">
 <a href="https://share.google/9jpuw9nRfJc3PR2UR"
-target="_blank" class="hero-btn">
+target="_blank" rel="noopener noreferrer" class="hero-btn">
 View More Reviews
 </a>
 </div>
@@ -1505,7 +1513,7 @@ class="float-btn call-btn">
 
 <a href="https://wa.me/919007350757"
 class="float-btn whatsapp-btn"
-target="_blank">
+target="_blank" rel="noopener noreferrer">
 <i class="fa-brands fa-whatsapp"></i>
 </a>
 
@@ -1686,7 +1694,7 @@ Close
 
 /* TAB */
 
-function openTab(tabId){
+function openTab(event,tabId){
 
 document.querySelectorAll('.form-box').forEach(box=>{
 box.classList.remove('active');
@@ -1899,14 +1907,19 @@ let service =
 document.getElementById("serviceType").value;
 
 let hourly =
-document.getElementById("hourlyPackage") ?
-document.getElementById("hourlyPackage").value : "";
+document.getElementById("hourlyPackage").value;
+
+let outstationType =
+document.getElementById("outstationType").value;
 
 let pickup =
-document.querySelectorAll("input[type='text']")[0].value;
+document.getElementById("pickupLocation").value;
 
 let destination =
-document.querySelectorAll("input[type='text']")[1].value;
+document.getElementById("destination").value;
+
+let addPlace =
+document.querySelector("#addPlaceBox input").value;
 
 let passenger =
 document.getElementById("passengerCount").value;
@@ -1914,36 +1927,155 @@ document.getElementById("passengerCount").value;
 let car =
 document.getElementById("carSelection").value;
 
-let pickupDate =
+let pickupDateRaw =
 document.getElementById("pickupDate").value;
 
+let returnDateRaw =
+document.querySelector("#returnBox input") ?
+document.querySelector("#returnBox input").value : "";
+
 let name =
-document.querySelectorAll("input[type='text']")[3].value;
+document.getElementById("customerName").value;
 
 let phone =
-document.querySelector("input[type='tel']").value;
+document.getElementById("customerPhone").value;
+
+let otherInfo =
+document.querySelector("#ride textarea").value;
+
+
+/* DATE FORMAT */
+
+function formatDateTime(dateValue){
+
+if(!dateValue) return "";
+
+let date = new Date(dateValue);
+
+return date.toLocaleString("en-IN",{
+
+day:"2-digit",
+month:"short",
+year:"numeric",
+hour:"numeric",
+minute:"2-digit",
+hour12:true
+
+});
+
+}
+
+let pickupDate =
+formatDateTime(pickupDateRaw);
+
+let returnDate =
+formatDateTime(returnDateRaw);
+
+
+/* MESSAGE */
 
 let msg =
 `🚖 *New Booking Request*
 
-👤 Customer Name: ${name}
+👤 Customer Name:
+${name}
 
-📞 Contact Number: ${phone}
+📞 Contact Number:
+${phone}
 
-🚕 Service Type: ${service}
+🚕 Service Type:
+${service}`;
 
-⏰ Hourly Package: ${hourly}
 
-📍 Pickup Location: ${pickup}
+/* LOCAL */
 
-📌 Destination: ${destination}
+if(service === "Local"){
 
-👥 Passengers: ${passenger}
+msg += `
 
-🚘 Vehicle: ${car}
+⏰ Hourly Package:
+${hourly}`;
+
+}
+
+
+/* OUTSTATION */
+
+if(service === "Outstation"){
+
+msg += `
+
+🛣 Outstation Type:
+${outstationType}`;
+
+}
+
+
+/* COMMON DETAILS */
+
+msg += `
+
+📍 Pickup Location:
+${pickup}
+
+📌 Destination:
+${destination}`;
+
+
+/* ADDITIONAL PLACE */
+
+if(addPlace !== ""){
+
+msg += `
+
+➕ More Places:
+${addPlace}`;
+
+}
+
+
+/* PASSENGER */
+
+msg += `
+
+👥 Passengers:
+${passenger}
+
+🚘 Vehicle:
+${car}
 
 📅 Pickup Date & Time:
-${pickupDate}
+${pickupDate}`;
+
+
+/* ROUNDTRIP */
+
+if(service === "Outstation" &&
+outstationType === "Roundtrip"){
+
+msg += `
+
+🔁 Return Date & Time:
+${returnDate}`;
+
+}
+
+
+/* OTHER INFO */
+
+if(otherInfo !== ""){
+
+msg += `
+
+📝 Any Other Information:
+${otherInfo}`;
+
+}
+
+
+/* FOOTER */
+
+msg += `
 
 Thank You
 ARJUN CAR RENTAL`;
@@ -1959,7 +2091,9 @@ function previewBooking(){
 let msg = getBookingDetails();
 
 document.getElementById("previewContent").innerHTML =
-msg.replace(/\n/g,"<br>");
+msg
+.replace(/\n/g,"<br>")
+.replace(/\*([^*]+)\*/g,"<b>$1</b>");
 
 document.getElementById("previewPopup").style.display =
 "flex";
@@ -1979,6 +2113,8 @@ document.getElementById("previewPopup").style.display =
 
 function confirmBooking(){
 
+if(!validateBookingForm()) return;
+
 let msg = getBookingDetails();
 
 /* COMPANY WHATSAPP */
@@ -1992,7 +2128,8 @@ window.open(ownerUrl,"_blank");
 /* CUSTOMER WHATSAPP */
 
 let customerNumber =
-document.querySelector("input[type='tel']").value;
+document.getElementById("customerPhone").value
+.replace(/\D/g,'');
 
 if(customerNumber){
 
@@ -2238,7 +2375,37 @@ fetch("https://api.countapi.xyz/hit/arjuncarrental/visits")
 document.getElementById("visitorCount").innerText =
 data.value;
 
+})
+
+.catch(()=>{
+
+document.getElementById("visitorCount").innerText =
+"Live";
+
 });
+
+function validateBookingForm(){
+
+let name =
+document.getElementById("customerName").value;
+
+let phone =
+document.getElementById("customerPhone").value;
+
+let pickup =
+document.getElementById("pickupLocation").value;
+
+if(name === "" || phone === "" || pickup === ""){
+
+alert("Please Fill Required Details");
+
+return false;
+
+}
+
+return true;
+
+}
 </script>
 
 </body>
