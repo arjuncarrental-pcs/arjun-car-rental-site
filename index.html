@@ -1537,10 +1537,13 @@ class="float-btn call-btn">
 <i class="fa-solid fa-phone"></i>
 </a>
 
-<a href="https://wa.me/919007350757"
+<a href="javascript:void(0)"
 class="float-btn whatsapp-btn"
-target="_blank" rel="noopener noreferrer">
+onclick="openWhatsAppChat()"
+aria-label="WhatsApp Chat">
+
 <i class="fa-brands fa-whatsapp"></i>
+
 </a>
 
 <!-- PREVIEW POPUP -->
@@ -2584,6 +2587,18 @@ document.getElementById("serviceType").value =
 
 <script async
 src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+
+/* FLOATING WHATSAPP CHAT */
+
+function openWhatsAppChat(){
+
+window.open(
+"https://wa.me/919007350757",
+"_blank"
+);
+
+}
+  
 </script>
 
 </body>
