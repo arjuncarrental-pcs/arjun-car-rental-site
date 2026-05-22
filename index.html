@@ -27,7 +27,7 @@ content="https://arjuncarrental-pcs.github.io/arjun-car-rental-site/images/ACRlo
 "@context":"https://schema.org",
 "@type":"LocalBusiness",
 "name":"ARJUN CAR RENTAL",
-"image":"images/ACRlogo.jpg",
+"image":"https://arjuncarrental-pcs.github.io/arjun-car-rental-site/images/ACRlogo.jpg",
 "telephone":"+919007350757",
 "address":{
 "@type":"PostalAddress",
@@ -221,6 +221,7 @@ transform:scale(1.07);
 
 section{
 padding:90px 5%;
+scroll-margin-top:180px;
 }
 
 .section-title{
@@ -461,9 +462,6 @@ background:linear-gradient(45deg,#f44336,#ff5722);
 color:#fff;
 }
 
-.btn:hover{
-transform:translateY(-3px);
-}
 
 /* CONTACT */
 
@@ -586,7 +584,7 @@ top:150px;
 }
 
 .hero{
-padding-top:260px;
+padding-top:220px;
 }
 
 .hero h2{
@@ -645,7 +643,7 @@ font-size:30px;
 <div class="logo">
 
 <img src="images/ACRlogo.jpg"
-alt="ARJUN CAR RENTAL Logo">
+alt="ARJUN CAR RENTAL Logo" loading="lazy">
 
 <h1>
 ARJUN CAR RENTAL <br>
@@ -735,7 +733,7 @@ Book Your Ride
 
 <div class="about-img">
 
-<img src="images/carimagelogo.png" alt="Car Image With Branding" >
+<img src="images/carimagelogo.png" alt="Car Image With Branding" loading="lazy">
 
 </div>
 
@@ -776,7 +774,7 @@ Affordable Pricing and 24x7 Support.
 <div class="slide-track">
 
 <div class="card">
-<img src="images/toursimage.jpg" alt="Sedan Car Rental Kolkata" >
+<img src="images/toursimage.jpg" alt="Sedan Car Rental Kolkata" loading="lazy">
 <div class="card-content">
 <h3>Sedan Car</h3>
 <p>Swift Dzire</p>
@@ -785,7 +783,7 @@ Affordable Pricing and 24x7 Support.
 
 
 <div class="card">
-<img src="images/xcentplainfront.jpg" alt="Sedan Car Rental Kolkata" >
+<img src="images/xcentplainfront.jpg" alt="Sedan Car Rental Kolkata" loading="lazy">
 <div class="card-content">
 <h3>Sedan Car</h3>
 <p>Hyundai Xcent</p>
@@ -793,7 +791,7 @@ Affordable Pricing and 24x7 Support.
 </div>
 
 <div class="card">
-<img src="images/ertiganewfrontwhite.jpg" alt="Ertiga Car Rental Kolkata" >
+<img src="images/ertiganewfrontwhite.jpg" alt="Ertiga Car Rental Kolkata" loading="lazy">
 <div class="card-content">
 <h3>SUV Car</h3>
 <p>Maruti Ertiga</p>
@@ -801,7 +799,7 @@ Affordable Pricing and 24x7 Support.
 </div>
 
 <div class="card">
-<img src="images/4590innovafront.jpg" alt="Innova Car Rental Kolkata" >
+<img src="images/4590innovafront.jpg" alt="Innova Car Rental Kolkata" loading="lazy">
 <div class="card-content">
 <h3>SUV Car</h3>
 <p>Innova</p>
@@ -810,7 +808,7 @@ Affordable Pricing and 24x7 Support.
 
 
 <div class="card">
-<img src="images/scorpioside.jpg" alt="Scorpio Car Rental Kolkata" >
+<img src="images/scorpioside.jpg" alt="Scorpio Car Rental Kolkata" loading="lazy">
 <div class="card-content">
 <h3>SUV Car</h3>
 <p>Mahindra Scorpio</p>
@@ -818,7 +816,7 @@ Affordable Pricing and 24x7 Support.
 </div>
 
 <div class="card">
-<img src="images/13,17,26seatertraveler.png" alt="Tenpo Traveller Rental Kolkata" >
+<img src="images/13,17,26seatertraveler.png" alt="Tempo Traveller Rental Kolkata" loading="lazy">
 <div class="card-content">
 <h3>13 and 17 Seater</h3>
 <p> Tempo Traveller Service</p>
@@ -826,7 +824,7 @@ Affordable Pricing and 24x7 Support.
 </div>
 
 <div class="card">
-<img src="images/26seater2419frontside.jpg" alt="Tempo Traveller Rental Kolkata" >
+<img src="images/26seater2419frontside.jpg" alt="Tempo Traveller Rental Kolkata" loading="lazy">
 <div class="card-content">
 <h3>26 Seater</h3>
 <p>Tempo Traveller Service</p>
@@ -834,7 +832,7 @@ Affordable Pricing and 24x7 Support.
 </div>
 
 <div class="card">
-<img src="images/35seaterbus.jpg" alt="Bus Rental Kolkata" >
+<img src="images/35seaterbus.jpg" alt="Bus Rental Kolkata" loading="lazy">
 <div class="card-content">
 <h3>35 Seater Bus</h3>
 <p>Executive Bus Rental</p>
@@ -989,7 +987,7 @@ Attach Car
 
 <label>Pickup Location</label>
 
-<input type="text" id="pickupLocation">
+<input type="text" id="pickupLocation" required>
 
 </div>
 
@@ -1023,7 +1021,7 @@ Attach Car
 
 <select id="carSelection">
 
-<option>Select Passenger Count First</option>
+<option value="">Select Passenger Count First</option>
 
 </select>
 
@@ -1033,7 +1031,7 @@ Attach Car
 
 <label>Pickup Date & Time</label>
 
-<input type="datetime-local" id="pickupDate">
+<input type="datetime-local" id="pickupDate" required>
 
 </div>
 
@@ -1041,7 +1039,7 @@ Attach Car
 
 <label>Return Date & Time</label>
 
-<input type="datetime-local">
+<input type="datetime-local" id="returnDate">
 
 </div>
 
@@ -1049,7 +1047,7 @@ Attach Car
 
 <label>Customer Name</label>
 
-<input type="text" id="customerName">
+<input type="text" id="customerName" required>
 
 </div>
 
@@ -1057,7 +1055,7 @@ Attach Car
 
 <label>Customer Contact Number</label>
 
-<input type="tel" id="customerPhone" placeholder="+91">
+<input type="tel" id="customerPhone" placeholder="+91" required>
 
 </div>
 
@@ -1082,7 +1080,9 @@ Preview
 Submit
 </button>
 
-<button type="reset" class="btn reset-btn">
+<button type="reset"
+class="btn reset-btn"
+onclick="resetRideForm()">
 Reset
 </button>
 
@@ -1280,7 +1280,7 @@ Reset
 <div class="slide-track">
 
 <div class="card">
-<img src="images/proffessionalservice.png">
+<img src="images/proffessionalservice.png" alt="Proffessional Service Image" >
 <div class="card-content">
 <h3>Professional Service</h3>
 <p>Clean Cars and Professional Drivers.</p>
@@ -1288,7 +1288,7 @@ Reset
 </div>
 
 <div class="card">
-<img src="images/familytrip.png">
+<img src="images/familytrip.png" alt="Family Trip Image" >
 <div class="card-content">
 <h3>Family Trip</h3>
 <p>Comfortable Outstation Travel Experience.</p>
@@ -1296,7 +1296,7 @@ Reset
 </div>
 
 <div class="card">
-<img src="images/airportpickup.png">
+<img src="images/airportpickup.png" alt="Airport Service Image" >
 <div class="card-content">
 <h3>Airport Service</h3>
 <p>On-Time Pickup & Drop Service.</p>
@@ -1304,7 +1304,7 @@ Reset
 </div>
 
 <div class="card">
-<img src="images/railwaystation.png">
+<img src="images/railwaystation.png" alt="Railway Station Service Image" >
 <div class="card-content">
 <h3>Railway Station Service</h3>
 <p>On-Time Pickup & Drop Service.</p>
@@ -1312,10 +1312,18 @@ Reset
 </div>
 
 <div class="card">
-<img src="images/outstationtrip.png">
+<img src="images/outstationtrip.png" alt="Outstation Service Image" >
 <div class="card-content">
 <h3>Outstation</h3>
 <p>Oneway & Roundtrip Service.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="images/sightseeing.png" alt="Kolkata Tourist Places Image" >
+<div class="card-content">
+<h3>Kolkata Sightseeing</h3>
+<p>Kolkata Sightseeing/City Tour Service</p>
 </div>
 </div>
 
@@ -1458,12 +1466,14 @@ West Bengal
 <h3>Google Map</h3>
 
 <iframe
-src="https://maps.google.com/maps?q=17/6%20Shashi%20Bhushan%20Sarkar%20Lane%20Howrah&t=&z=13&ie=UTF8&iwloc=&output=embed"
+title="ARJUN CAR RENTAL Location"
+src="https://www.google.com/maps?q=17/6+Shashi+Bhushan+Sarkar+Lane+Howrah+711106&output=embed"
 width="100%"
 height="300"
 style="border:0;border-radius:15px;"
-allowfullscreen=""
-loading="lazy">
+allowfullscreen
+loading="lazy"
+referrerpolicy="no-referrer-when-downgrade">
 </iframe>
 
 </div>
@@ -1496,8 +1506,24 @@ Email: arjuncarrental@gmail.com
 <a href="tel:+919007350757">09007350757</a>
 </p>
 
-<div style="text-align:center;font-weight:600;margin-top:20px;">
-👁 Visitors: <span id="visitorCount"></span>
+<div style="
+text-align:center;
+font-weight:600;
+margin-top:20px;
+font-size:18px;
+color:#fff;
+">
+
+👁 Website Visitors:
+<span id="busuanzi_value_site_uv"
+style="
+color:#ff9800;
+font-size:22px;
+font-weight:800;
+">
+0
+</span>
+
 </div>
 
 </footer>
@@ -1745,11 +1771,15 @@ hourlyRentalBox.style.display='block';
 
 outstationTypeBox.style.display='none';
 
-addPlaceBox.style.display='block';
+addPlaceBox.style.display='none';
 
 hourlyRentalBox.style.display='none';
 
 }
+
+/* INITIAL LOAD FIX */
+
+serviceType.dispatchEvent(new Event('change'));
 
 });
 
@@ -1786,6 +1816,24 @@ document.getElementById('carSelection');
 passengerCount.addEventListener('input',()=>{
 
 let count = parseInt(passengerCount.value);
+
+if(isNaN(count)){
+
+carSelection.innerHTML =
+'<option value="">Select Passenger Count First</option>';
+
+return;
+
+}
+
+if(isNaN(count)){
+
+carSelection.innerHTML =
+'<option value="">Select Passenger Count First</option>';
+
+return;
+
+}
 
 let options = [];
 
@@ -1931,8 +1979,8 @@ let pickupDateRaw =
 document.getElementById("pickupDate").value;
 
 let returnDateRaw =
-document.querySelector("#returnBox input") ?
-document.querySelector("#returnBox input").value : "";
+document.getElementById("returnDate") ?
+document.getElementById("returnDate").value : "";
 
 let name =
 document.getElementById("customerName").value;
@@ -2171,24 +2219,76 @@ let school = inputs[5].value;
 let pickup = inputs[6].value;
 let time = inputs[7].value;
 
+let otherInfo =
+document.querySelector("#school textarea").value;
+
+
+/* TIME FORMAT */
+
+function formatTime(timeValue){
+
+if(!timeValue) return "";
+
+let [hour, minute] = timeValue.split(":");
+
+let date = new Date();
+
+date.setHours(hour);
+date.setMinutes(minute);
+
+return date.toLocaleTimeString("en-IN",{
+
+hour:"numeric",
+minute:"2-digit",
+hour12:true
+
+});
+
+}
+
+let formattedTime =
+formatTime(time);
+
 let msg =
 `🚌 *School Pool Service Request*
 
-👦 Student Name: ${studentName}
+👦 Student Name:
+${studentName}
 
-🎂 Age: ${age}
+🎂 Age:
+${age}
 
-🏫 Class: ${studentClass}
+🏫 Class:
+${studentClass}
 
-👨 Parent Name: ${parentName}
+👨 Parent Name:
+${parentName}
 
-📞 Contact Number: ${phone}
+📞 Contact Number:
+${phone}
 
-🏫 School Name: ${school}
+🏫 School Name:
+${school}
 
-📍 Pickup Location: ${pickup}
+📍 Pickup Location:
+${pickup}
 
-⏰ Pickup Time: ${time}
+⏰ Pickup Time:
+${formattedTime}`;
+
+
+/* OTHER INFO */
+
+if(otherInfo !== ""){
+
+msg += `
+
+📝 Any Other Information:
+${otherInfo}`;
+
+}
+
+msg += `
 
 Thank You
 ARJUN CAR RENTAL`;
@@ -2277,24 +2377,49 @@ document.querySelector("#attach select").value;
 let reg = inputs[5].value;
 let garage = inputs[6].value;
 
+let otherInfo =
+document.querySelector("#attach textarea").value;
+
 let msg =
 `🚘 *Attach Car Request*
 
-👤 Owner Name: ${ownerName}
+👤 Owner Name:
+${ownerName}
 
-📞 Contact Number: ${phone}
+📞 Contact Number:
+${phone}
 
-📧 Email: ${email}
+📧 Email:
+${email}
 
-🏢 Car Company: ${company}
+🏢 Car Company:
+${company}
 
-🚗 Model: ${model}
+🚗 Model:
+${model}
 
-⛽ Fuel Type: ${fuel}
+⛽ Fuel Type:
+${fuel}
 
-🪪 Registration Number: ${reg}
+🪪 Registration Number:
+${reg}
 
-📍 Garage Location: ${garage}
+📍 Garage Location:
+${garage}`;
+
+
+/* OTHER INFO */
+
+if(otherInfo !== ""){
+
+msg += `
+
+📝 Any Other Information:
+${otherInfo}`;
+
+}
+
+msg += `
 
 Thank You
 ARJUN CAR RENTAL`;
@@ -2364,26 +2489,6 @@ closeAttachPreview();
 
 }
 
-/* REAL VISITOR COUNTER */
-
-fetch("https://api.countapi.xyz/hit/arjuncarrental/visits")
-
-.then((res)=>res.json())
-
-.then((data)=>{
-
-document.getElementById("visitorCount").innerText =
-data.value;
-
-})
-
-.catch(()=>{
-
-document.getElementById("visitorCount").innerText =
-"Live";
-
-});
-
 function validateBookingForm(){
 
 let name =
@@ -2406,6 +2511,79 @@ return false;
 return true;
 
 }
+
+/* CLOSE POPUP OUTSIDE CLICK */
+
+window.addEventListener('click',function(e){
+
+if(e.target === document.getElementById("previewPopup")){
+
+closePreview();
+
+}
+
+if(e.target === document.getElementById("schoolPreviewPopup")){
+
+closeSchoolPreview();
+
+}
+
+if(e.target === document.getElementById("attachPreviewPopup")){
+
+closeAttachPreview();
+
+}
+
+});
+
+/* ESC KEY CLOSE */
+
+document.addEventListener('keydown',function(e){
+
+if(e.key === "Escape"){
+
+closePreview();
+
+closeSchoolPreview();
+
+closeAttachPreview();
+
+}
+
+});
+
+/* RESET RIDE FORM */
+
+function resetRideForm(){
+
+setTimeout(()=>{
+
+document.getElementById("outstationTypeBox").style.display =
+"none";
+
+document.getElementById("returnBox").style.display =
+"none";
+
+document.getElementById("addPlaceBox").style.display =
+"none";
+
+document.getElementById("hourlyRentalBox").style.display =
+"block";
+
+document.getElementById("carSelection").innerHTML =
+'<option value="">Select Passenger Count First</option>';
+
+document.getElementById("serviceType").value =
+"Local";
+
+},0);
+
+}
+
+</script>
+
+<script async
+src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
 
 </body>
