@@ -48,7 +48,7 @@ content="https://arjuncarrental-pcs.github.io/arjun-car-rental-site/">
 ARJUN CAR RENTAL | Executive Taxi/Cab Service in Howrah and Kolkata
 </title>
 
-<link rel="icon"
+<link rel="apple-touch-icon"
 type="image/png"
 href="images/ACRlogo.jpg">
 
@@ -67,14 +67,600 @@ crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css">
-  
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 
 <meta name="theme-color" content="#ff5722">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="format-detection" content="telephone=no">
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f5f7ff;
+overflow-x:hidden;
+padding-top:160px;
+}
+
+/* HEADER */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#fff;
+z-index:1000;
+box-shadow:0 2px 15px rgba(0,0,0,0.1);
+}
+
+.header-container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 5%;
+flex-wrap:wrap;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo img{
+width:65px;
+height:65px;
+border-radius:50%;
+border:3px solid #ff9800;
+}
+
+.logo h1{
+font-size:20px;
+font-weight:800;
+line-height:1.4;
+color:#111;
+}
+
+.header-contact{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+}
+
+.header-contact a{
+text-decoration:none;
+padding:12px 20px;
+border-radius:50px;
+background:linear-gradient(45deg,#ff9800,#ff5722);
+color:#fff;
+font-weight:600;
+transition:0.4s;
+}
+
+.header-contact a:hover{
+transform:translateY(-3px);
+}
+
+/* NAVIGATION */
+
+nav{
+position:fixed;
+top:100px;
+left:0;
+width:100%;
+background:#111;
+z-index:999;
+padding:12px 5%;
+}
+
+nav ul{
+display:flex;
+justify-content:center;
+align-items:center;
+list-style:none;
+gap:25px;
+flex-wrap:wrap;
+}
+
+nav ul li a{
+text-decoration:none;
+color:#fff;
+font-weight:600;
+padding:10px 18px;
+border-radius:40px;
+transition:0.4s;
+}
+
+nav ul li a:hover{
+background:linear-gradient(45deg,#ff9800,#ff5722);
+}
+
+/* HERO */
+
+.hero{
+min-height:calc(100vh - 160px);
+background:
+linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+url('images/carimage1.jpg');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:220px 20px 100px;
+}
+
+.hero-content{
+max-width:900px;
+color:#fff;
+animation:fadeIn 1.5s ease;
+}
+
+.hero h2{
+font-size:60px;
+font-weight:800;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+line-height:1.8;
+margin-bottom:35px;
+}
+
+.hero-btn{
+display:inline-block;
+padding:16px 35px;
+border-radius:50px;
+background:linear-gradient(45deg,#ff9800,#ff5722);
+color:#fff;
+font-weight:700;
+text-decoration:none;
+transition:0.4s;
+}
+
+.hero-btn:hover{
+transform:scale(1.07);
+}
+
+/* SECTION */
+
+section{
+padding:90px 5%;
+scroll-margin-top:220px;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:50px;
+}
+
+.section-title h2{
+font-size:42px;
+margin-bottom:15px;
+font-weight:800;
+}
+
+.section-title p{
+color:#555;
+font-size:18px;
+}
+
+/* ABOUT */
+
+.about-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:40px;
+align-items:center;
+}
+
+.about-img img{
+width:100%;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.about-content h3{
+font-size:35px;
+margin-bottom:20px;
+}
+
+.about-content p{
+line-height:2;
+color:#555;
+}
+
+/* SLIDER */
+
+.slider{
+overflow:hidden;
+position:relative;
+}
+
+.slide-track{
+display:flex;
+width:max-content;
+animation:scroll 28s linear infinite;
+}
+
+.slide-track{
+will-change:transform;
+}
+
+.slide-track:hover{
+animation-play-state:paused;
+}
+
+@media(max-width:500px){
+
+.hero h2{
+font-size:28px;
+}
+
+.hero p{
+font-size:15px;
+}
+
+.btn{
+width:100%;
+text-align:center;
+}
+
+.card{
+width:90%;
+}
+
+}
+
+.card{
+width:320px;
+margin:15px;
+background:#fff;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card-content{
+padding:20px;
+}
+
+.card-content h3{
+margin-bottom:10px;
+font-size:22px;
+}
+
+.card-content p{
+line-height:1.7;
+color:#555;
+}
+
+/* FORM */
+
+.form-tabs{
+display:flex;
+justify-content:center;
+gap:15px;
+margin-bottom:35px;
+flex-wrap:wrap;
+}
+
+.tab-btn{
+padding:14px 25px;
+border:none;
+border-radius:50px;
+background:#ddd;
+font-weight:700;
+cursor:pointer;
+transition:0.4s;
+}
+
+.tab-btn.active,
+.tab-btn:hover{
+background:linear-gradient(45deg,#ff9800,#ff5722);
+color:#fff;
+}
+
+.form-box{
+display:none;
+background:#fff;
+padding:40px;
+border-radius:25px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+.form-box.active{
+display:block;
+animation:fadeIn 0.6s ease;
+}
+
+.form-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.input-box{
+display:flex;
+flex-direction:column;
+}
+
+.input-box label{
+margin-bottom:8px;
+font-weight:600;
+}
+
+.input-box input,
+.input-box select,
+.input-box textarea{
+padding:14px;
+border-radius:12px;
+border:1px solid #ccc;
+outline:none;
+font-size:15px;
+}
+
+textarea{
+resize:none;
+height:120px;
+}
+
+.btn-group{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.btn{
+padding:15px 30px;
+border:none;
+border-radius:50px;
+font-weight:700;
+cursor:pointer;
+transition:0.4s;
+background:linear-gradient(45deg,#ff9800,#ff5722);
+color:#fff;
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
+position:relative;
+overflow:hidden;
+}
+
+.btn::before{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+top:0;
+left:-100%;
+background:linear-gradient(120deg,transparent,rgba(255,255,255,0.5),transparent);
+transition:0.5s;
+}
+
+.btn:hover::before{
+left:100%;
+}
+
+.btn:hover{
+transform:translateY(-5px) scale(1.05);
+}
+
+.preview-btn{
+background:linear-gradient(45deg,#2196f3,#3f51b5);
+color:#fff;
+}
+
+.submit-btn{
+background:linear-gradient(45deg,#4caf50,#009688);
+color:#fff;
+}
+
+.reset-btn{
+background:linear-gradient(45deg,#f44336,#ff5722);
+color:#fff;
+}
+
+
+/* CONTACT */
+
+.contact-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.contact-box{
+background:#fff;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.contact-box h3{
+margin-bottom:20px;
+}
+
+.contact-box p{
+margin-bottom:15px;
+line-height:1.8;
+}
+
+.contact-box a{
+text-decoration:none;
+color:#ff5722;
+font-weight:600;
+}
+
+/* FOOTER */
+
+footer{
+background:#111;
+color:#fff;
+padding:40px 5%;
+text-align:center;
+}
+
+footer h3{
+font-size:28px;
+margin-bottom:20px;
+}
+
+footer p{
+line-height:2;
+color:#ddd;
+}
+
+.fcontactbox a{
+text-decoration:none;
+color:#ff5722;
+font-weight:600;
+}
+
+/* FLOAT */
+
+.float-btn{
+position:fixed;
+right:20px;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:28px;
+color:#fff;
+text-decoration:none;
+z-index:999;
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+animation:pulse 2s infinite;
+}
+
+.call-btn{
+bottom:100px;
+background:#ff5722;
+}
+
+.whatsapp-btn{
+bottom:30px;
+background:#25D366;
+}
+
+/* ANIMATION */
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.08);}
+100%{transform:scale(1);}
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes scroll{
+0%{
+transform:translateX(0);
+}
+100%{
+transform:translateX(calc(-350px * 6));
+}
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+nav{
+top:170px;
+}
+
+.hero{
+padding-top:220px;
+}
+
+.hero h2{
+font-size:38px;
+}
+
+.hero p{
+font-size:17px;
+}
+
+.logo h1{
+font-size:15px;
+}
+
+.header-container{
+justify-content:center;
+gap:15px;
+}
+
+nav ul{
+gap:10px;
+}
+
+nav ul li a{
+font-size:13px;
+padding:8px 14px;
+}
+
+.section-title h2{
+font-size:30px;
+}
+
+/* VISITOR COUNTER */
+
+.visitor-box{
+margin-top:30px;
+text-align:center;
+padding:20px;
+border-radius:15px;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(5px);
+}
+
+.visitor-box h3{
+color:#fff;
+margin-bottom:15px;
+font-size:24px;
+}
+
+.visitor-box img{
+max-width:100%;
+border-radius:10px;
+}
+
+}
+
+</style>
 
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-293BYTN2W2"></script>
@@ -1186,6 +1772,1011 @@ Close
 
 </div>
 
+<!-- JAVASCRIPT -->
+
+<script>
+
+/* TAB */
+
+function openTab(event,tabId){
+
+document.querySelectorAll('.form-box').forEach(box=>{
+box.classList.remove('active');
+});
+
+document.querySelectorAll('.tab-btn').forEach(btn=>{
+btn.classList.remove('active');
+});
+
+document.getElementById(tabId).classList.add('active');
+
+event.target.classList.add('active');
+
+}
+
+/* SERVICE TYPE */
+
+const serviceType = document.getElementById('serviceType');
+
+const outstationTypeBox =
+document.getElementById('outstationTypeBox');
+
+const addPlaceBox =
+document.getElementById('addPlaceBox');
+
+const hourlyRentalBox =
+document.getElementById('hourlyRentalBox');
+
+serviceType.addEventListener('change',()=>{
+
+if(serviceType.value === 'Outstation'){
+
+outstationTypeBox.style.display='block';
+addPlaceBox.style.display='block';
+hourlyRentalBox.style.display='none';
+
+}else if(serviceType.value === 'Local'){
+
+outstationTypeBox.style.display='none';
+addPlaceBox.style.display='none';
+hourlyRentalBox.style.display='block';
+
+}else{
+
+outstationTypeBox.style.display='none';
+addPlaceBox.style.display='none';
+hourlyRentalBox.style.display='none';
+
+}
+
+});
+
+/* INITIAL LOAD FIX */
+serviceType.dispatchEvent(new Event('change'));
+
+/* ROUNDTRIP */
+
+const outstationType =
+document.getElementById('outstationType');
+
+const returnBox =
+document.getElementById('returnBox');
+
+outstationType.addEventListener('change',()=>{
+
+if(outstationType.value === 'Roundtrip'){
+
+returnBox.style.display='block';
+
+}else{
+
+returnBox.style.display='none';
+
+}
+
+});
+
+/* PASSENGER CONDITION */
+
+const passengerCount =
+document.getElementById('passengerCount');
+
+const carSelection =
+document.getElementById('carSelection');
+
+passengerCount.addEventListener('input',()=>{
+
+let count = parseInt(passengerCount.value);
+
+
+if(isNaN(count)){
+
+carSelection.innerHTML =
+'<option value="">Select Passenger Count First</option>';
+
+return;
+
+}
+
+let options = [];
+
+if(count <=4){
+
+options=[
+"Swift Dzire / Hyundai Xcent / Tata Zest",
+"Scorpio / Innova / Ertiga",
+"13 Seater Tempo Traveller"
+];
+
+}
+
+else if(count <=6){
+
+options=[
+"Scorpio / Innova / Ertiga",
+"13 Seater Tempo Traveller"
+];
+
+}
+
+else if(count <=7){
+
+options=[
+"Scorpio / Innova",
+"13 Seater Tempo Traveller"
+];
+
+}
+
+else if(count <=8){
+
+options=[
+"Scorpio",
+"13 Seater Tempo Traveller"
+];
+
+}
+
+else if(count <=13){
+
+options=[
+"13 Seater Tempo Traveller",
+"26 Seater Tempo Traveller"
+];
+
+}
+
+else if(count <=25){
+
+options=[
+"26 Seater Tempo Traveller",
+"30 Seater Bus AC",
+"35 Seater Bus AC",
+"40 Seater Bus AC"
+];
+
+}
+
+else if(count <=30){
+
+options=[
+"30 Seater Bus AC",
+"35 Seater Bus AC",
+"40 Seater Bus AC"
+];
+
+}
+
+else if(count <=35){
+
+options=[
+"35 Seater Bus AC",
+"40 Seater Bus AC"
+];
+
+}
+
+else if(count <=40){
+
+options=[
+"40 Seater Bus AC"
+];
+
+}
+
+else{
+
+alert("Please Contact Helpline Number: 9007350757");
+
+carSelection.innerHTML =
+'<option value="">Not Available</option>';
+
+}
+
+carSelection.innerHTML='';
+
+options.forEach(option=>{
+
+let opt=document.createElement('option');
+
+opt.textContent=option;
+
+carSelection.appendChild(opt);
+
+});
+
+});
+
+/* DATE VALIDATION */
+
+document.getElementById('pickupDate').min =
+new Date().toISOString().slice(0,16);
+
+
+/* WHATSAPP AUTO BOOKING MESSEGE */
+
+function getBookingDetails(){
+
+let service =
+document.getElementById("serviceType").value;
+
+let hourly =
+document.getElementById("hourlyPackage").value;
+
+let outstationType =
+document.getElementById("outstationType").value;
+
+let pickup =
+document.getElementById("pickupLocation").value;
+
+let destination =
+document.getElementById("destination").value;
+
+let addPlace =
+document.querySelector("#addPlaceBox input").value;
+
+let passenger =
+document.getElementById("passengerCount").value;
+
+let car =
+document.getElementById("carSelection").value;
+
+let pickupDateRaw =
+document.getElementById("pickupDate").value;
+
+let returnDateRaw =
+document.getElementById("returnDate") ?
+document.getElementById("returnDate").value : "";
+
+let name =
+document.getElementById("customerName").value;
+
+let phone =
+document.getElementById("customerPhone").value;
+
+let otherInfo =
+document.querySelector("#ride textarea").value;
+
+
+/* DATE FORMAT */
+
+function formatDateTime(dateValue){
+
+if(!dateValue) return "";
+
+let date = new Date(dateValue);
+
+return date.toLocaleString("en-IN",{
+
+day:"2-digit",
+month:"short",
+year:"numeric",
+hour:"numeric",
+minute:"2-digit",
+hour12:true
+
+});
+
+}
+
+let pickupDate =
+formatDateTime(pickupDateRaw);
+
+let returnDate =
+formatDateTime(returnDateRaw);
+
+if(service === "Outstation" &&
+outstationType === "Roundtrip" &&
+returnDateRaw === ""){
+
+alert("Please Select Return Date");
+
+return false;
+
+}
+
+if(returnDateRaw && new Date(returnDateRaw) < new Date(pickupDateRaw)){
+
+alert("Return Date Must Be After Pickup Date");
+
+return false;
+
+}
+
+
+/* MESSAGE */
+
+let msg = `
+🚖 *New Booking Request*
+
+👤 Customer Name:
+${name}
+
+📞 Contact Number:
+${phone}
+
+🚕 Service Type:
+${service}
+`;
+
+
+/* LOCAL */
+
+if(service === "Local"){
+
+msg += `
+⏰ Hourly Package:
+${hourly}
+`;
+
+}
+
+
+/* OUTSTATION */
+
+if(service === "Outstation"){
+
+msg += `
+🛣 Outstation Type:
+${outstationType}
+`;
+
+}
+
+
+/* COMMON DETAILS */
+
+msg += `
+📍 Pickup Location:
+${pickup}
+
+📌 Destination:
+${destination}
+`;
+
+
+/* ADDITIONAL PLACE */
+
+if(addPlace !== ""){
+
+msg += `
+➕ More Places:
+${addPlace}
+`;
+
+}
+
+
+/* PASSENGER */
+
+msg += `
+👥 Passengers:
+${passenger}
+
+🚘 Vehicle:
+${car}
+
+📅 Pickup Date & Time:
+${pickupDate}
+`;
+
+
+/* ROUNDTRIP */
+
+if(service === "Outstation" &&
+outstationType === "Roundtrip"){
+
+msg += `
+🔁 Return Date & Time:
+${returnDate}
+`;
+
+}
+
+
+/* OTHER INFO */
+
+if(otherInfo !== ""){
+
+msg += `
+
+📝 Any Other Information:
+${otherInfo}`;
+
+}
+
+
+/* FOOTER */
+
+msg += `
+
+Thank You
+ARJUN CAR RENTAL
+(EXECUTIVE TAXI SERVICE)
+`;
+
+return msg;
+
+}
+
+function previewBooking(){
+
+if(!validateBookingForm()){
+return;
+}
+
+let msg = getBookingDetails();
+
+document.getElementById("previewContent").innerHTML =
+escapeHTML(msg)
+.replace(/\n/g,"<br>")
+.replace(/\*([^*]+)\*/g,"<b>$1</b>");
+
+document.getElementById("previewPopup").style.display =
+"flex";
+
+document.body.style.overflow = "hidden";
+
+}
+
+/* CLOSE */
+
+function closePreview(){
+
+document.getElementById("previewPopup").style.display =
+"none";
+
+document.body.style.overflow = "auto";
+
+}
+
+/* CONFIRM */
+
+function confirmBooking(){
+
+let msg = getBookingDetails();
+
+/* COMPANY WHATSAPP */
+
+let ownerUrl =
+"https://wa.me/919007350757?text=" +
+encodeURIComponent(msg);
+
+window.open(ownerUrl,"_blank");
+
+if(typeof gtag === "function"){
+
+gtag('event', 'booking_submit', {
+event_category: 'Booking',
+event_label: 'Ride Booking'
+});
+
+}
+
+alert("Booking Submitted Successfully!");
+
+closePreview();
+
+}
+
+/* SUBMIT BUTTON */
+
+function sendWhatsApp(){
+
+if(!validateBookingForm()){
+return;
+}
+
+confirmBooking();
+
+}
+
+/* SCHOOL POOL SERVICE */
+
+function getSchoolDetails(){
+
+let inputs =
+document.querySelectorAll("#school input");
+
+let studentName = inputs[0].value;
+let age = inputs[1].value;
+let studentClass = inputs[2].value;
+let parentName = inputs[3].value;
+let phone = inputs[4].value;
+let school = inputs[5].value;
+let pickup = inputs[6].value;
+let time = inputs[7].value;
+
+let otherInfo =
+document.querySelector("#school textarea").value;
+
+
+/* TIME FORMAT */
+
+function formatTime(timeValue){
+
+if(!timeValue) return "";
+
+let [hour, minute] = timeValue.split(":");
+
+let date = new Date();
+
+date.setHours(hour);
+date.setMinutes(minute);
+
+return date.toLocaleTimeString("en-IN",{
+
+hour:"numeric",
+minute:"2-digit",
+hour12:true
+
+});
+
+}
+
+let formattedTime =
+formatTime(time);
+
+let msg = `
+🚌 *School Pool Service Request*
+
+👦 Student Name:
+${studentName}
+
+🎂 Age:
+${age}
+
+🏫 Class:
+${studentClass}
+
+👨 Parent Name:
+${parentName}
+
+📞 Contact Number:
+${phone}
+
+🏫 School Name:
+${school}
+
+📍 Pickup Location:
+${pickup}
+
+⏰ Pickup Time:
+${formattedTime}
+`;
+
+
+/* OTHER INFO */
+
+if(otherInfo !== ""){
+
+msg += `
+📝 Any Other Information:
+${otherInfo}
+`;
+
+}
+
+msg += `
+
+Thank You
+ARJUN CAR RENTAL
+(EXECUTIVE TAXI SERVICE)
+`;
+
+return msg;
+
+}
+
+/* SCHOOL PREVIEW */
+
+function previewSchoolBooking(){
+
+let requiredFields =
+document.querySelectorAll("#school input[required]");
+
+for(let field of requiredFields){
+
+if(field.value.trim() === ""){
+alert("Please Fill All Required Fields");
+return;
+}
+
+}
+
+let msg = getSchoolDetails();
+
+document.getElementById(
+"schoolPreviewContent"
+).innerHTML = escapeHTML(msg)
+.replace(/\n/g,"<br>")
+.replace(/\*([^*]+)\*/g,"<b>$1</b>");
+
+document.getElementById(
+"schoolPreviewPopup"
+).style.display = "flex";
+
+}
+
+/* CLOSE */
+
+function closeSchoolPreview(){
+
+document.getElementById(
+"schoolPreviewPopup"
+).style.display = "none";
+
+}
+
+/* CONFIRM */
+
+function confirmSchoolBooking(){
+
+let msg = getSchoolDetails();
+
+/* OWNER */
+
+let ownerUrl =
+"https://wa.me/919007350757?text=" +
+encodeURIComponent(msg);
+
+window.open(ownerUrl,"_blank");
+
+/* CUSTOMER */
+
+let phone =
+document.querySelectorAll("#school input")[4].value;
+
+if(phone){
+
+let customerUrl =
+"https://wa.me/" +
+phone.replace(/\D/g,'').slice(-10) +
+"?text=" +
+encodeURIComponent(msg);
+
+window.open(customerUrl,"_blank");
+
+}
+
+closeSchoolPreview();
+
+document.body.style.overflow = "auto";
+
+}
+
+/* ATTACH CAR */
+
+function getAttachDetails(){
+
+let inputs =
+document.querySelectorAll("#attach input");
+
+let ownerName = inputs[0].value;
+let phone = inputs[1].value;
+let email = inputs[2].value;
+let company = inputs[3].value;
+let model = inputs[4].value;
+
+let fuel =
+document.querySelector("#attach select").value;
+
+let reg = inputs[5].value;
+let garage = inputs[6].value;
+
+let otherInfo =
+document.querySelector("#attach textarea").value;
+
+let msg = `
+🚘 *Attach Car Request*
+
+👤 Owner Name:
+${ownerName}
+
+📞 Contact Number:
+${phone}
+
+📧 Email:
+${email}
+
+🏢 Car Company:
+${company}
+
+🚗 Model:
+${model}
+
+⛽ Fuel Type:
+${fuel}
+
+🪪 Registration Number:
+${reg}
+
+📍 Garage Location:
+${garage}
+`;
+
+
+/* OTHER INFO */
+
+if(otherInfo !== ""){
+
+msg += `
+📝 Any Other Information:
+${otherInfo}
+`;
+
+}
+
+msg += `
+
+Thank You
+ARJUN CAR RENTAL
+(EXECUTIVE TAXI SERVICE)
+`;
+
+return msg;
+
+}
+
+/* PREVIEW */
+
+function previewAttachBooking(){
+
+let requiredFields =
+document.querySelectorAll("#attach input[required]");
+
+for(let field of requiredFields){
+
+if(field.value.trim() === ""){
+alert("Please Fill All Required Fields");
+return;
+}
+
+}
+
+let msg = getAttachDetails();
+
+document.getElementById(
+"attachPreviewContent"
+).innerHTML = escapeHTML(msg)
+.replace(/\n/g,"<br>")
+.replace(/\*([^*]+)\*/g,"<b>$1</b>");
+
+document.getElementById(
+"attachPreviewPopup"
+).style.display = "flex";
+
+}
+
+/* CLOSE */
+
+function closeAttachPreview(){
+
+document.getElementById(
+"attachPreviewPopup"
+).style.display = "none";
+
+}
+
+/* CONFIRM */
+
+function confirmAttachBooking(){
+
+let msg = getAttachDetails();
+
+/* OWNER */
+
+let ownerUrl =
+"https://wa.me/919007350757?text=" +
+encodeURIComponent(msg);
+
+window.open(ownerUrl,"_blank");
+
+/* CUSTOMER */
+
+let phone =
+document.querySelectorAll("#attach input")[1].value;
+
+if(phone){
+
+let customerUrl =
+"https://wa.me/" +
+phone.replace(/\D/g,'').slice(-10) +
+"?text=" +
+encodeURIComponent(msg);
+
+window.open(customerUrl,"_blank");
+
+}
+
+closeAttachPreview();
+
+}
+
+function validateBookingForm(){
+
+let name =
+document.getElementById("customerName").value;
+
+let phone =
+document.getElementById("customerPhone").value;
+
+let pickup =
+document.getElementById("pickupLocation").value;
+
+let cleanedPhone = phone.replace(/\D/g,'');
+
+if(cleanedPhone.length === 12 &&
+cleanedPhone.startsWith("91")){
+
+cleanedPhone = cleanedPhone.slice(2);
+
+}
+
+let phonePattern = /^[6-9]\d{9}$/;
+
+if(!phonePattern.test(cleanedPhone)){
+alert("Enter Valid Mobile Number");
+return false;
+}
+
+let passenger =
+document.getElementById("passengerCount").value;
+
+let car =
+document.getElementById("carSelection").value;
+
+let pickupDate =
+document.getElementById("pickupDate").value;
+
+if(passenger === ""){
+
+alert("Please Enter Passenger Count");
+
+return false;
+
+}
+
+if(car === ""){
+
+alert("Please Select Vehicle");
+
+return false;
+
+}
+
+if(pickupDate === ""){
+
+alert("Please Select Pickup Date");
+
+return false;
+
+}
+
+if(name === "" || phone === "" || pickup === ""){
+
+alert("Please Fill Required Details");
+
+return false;
+
+}
+
+let service =
+document.getElementById("serviceType").value;
+
+let destination =
+document.getElementById("destination").value;
+
+if(service !== "Local" && destination === ""){
+
+alert("Please Enter Destination");
+
+return false;
+
+}
+
+return true;
+
+}
+
+/* CLOSE POPUP OUTSIDE CLICK */
+
+window.addEventListener('click',function(e){
+
+if(e.target === document.getElementById("previewPopup")){
+
+closePreview();
+
+}
+
+if(e.target === document.getElementById("schoolPreviewPopup")){
+
+closeSchoolPreview();
+
+}
+
+if(e.target === document.getElementById("attachPreviewPopup")){
+
+closeAttachPreview();
+
+}
+
+});
+
+/* ESC KEY CLOSE */
+
+document.addEventListener('keydown',function(e){
+
+if(e.key === "Escape"){
+
+closePreview();
+
+closeSchoolPreview();
+
+closeAttachPreview();
+
+}
+
+});
+
+/* RESET RIDE FORM */
+
+
+function resetRideForm(){
+
+setTimeout(()=>{
+
+document.getElementById("outstationTypeBox").style.display =
+"none";
+
+document.getElementById("returnBox").style.display =
+"none";
+
+document.getElementById("addPlaceBox").style.display =
+"none";
+
+document.getElementById("hourlyRentalBox").style.display =
+"block";
+
+document.getElementById("carSelection").innerHTML =
+'<option value="">Select Passenger Count First</option>';
+
+document.getElementById("serviceType").value =
+"Local";
+
+},0);
+
+}
+
+</script>
+
+<!-- FLOATING WHATSAPP CHAT -->
+
+<script>
+
+function openWhatsAppChat(){
+
+window.open(
+"https://wa.me/919007350757",
+"_blank"
+);
+
+}
+
+
+function escapeHTML(str){
+
+return str
+.replace(/&/g,"&amp;")
+.replace(/</g,"&lt;")
+.replace(/>/g,"&gt;")
+.replace(/"/g,"&quot;")
+.replace(/'/g,"&#039;");
+
+}
+
+
+</script>
 
 </body>
 </html>
