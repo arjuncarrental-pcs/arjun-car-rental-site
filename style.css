@@ -145,10 +145,6 @@ body{background:#f5f7ff; overflow-x:hidden; padding-top:160px;}
 	nav ul li a{font-size:13px;	padding:8px 14px;}
 	.section-title h2{font-size:30px;}
 	
-	/* payment */
-	
-	.payment-btn{bottom:170px; background:#4caf50; font-size:30px; font-weight:700;}
-
 	/* VISITOR COUNTER */
 
 	.visitor-box{margin-top:30px; text-align:center; padding:20px; border-radius:15px;
@@ -156,3 +152,7 @@ body{background:#f5f7ff; overflow-x:hidden; padding-top:160px;}
 	.visitor-box h3{color:#fff;	margin-bottom:15px;	font-size:24px;}
 	.visitor-box img{max-width:100%; border-radius:10px;}
 	}
+
+/* payment */
+	
+	.payment-btn{bottom:170px; background:#4caf50; font-size:30px; font-weight:700;}
