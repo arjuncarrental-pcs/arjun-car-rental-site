@@ -573,10 +573,3 @@ UPI ID:
 	.replace(/"/g,"&quot;")
 	.replace(/'/g,"&#039;");
 	}
-	
-	/* PAYMENT */
-	
-	function openPaymentPopup(){document.getElementById("paymentPopup").style.display="flex";
-	}
-	function closePaymentPopup(){document.getElementById("paymentPopup").style.display="none";
-	}
