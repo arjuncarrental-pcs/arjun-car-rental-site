@@ -129,7 +129,7 @@ body{background:#f5f7ff; overflow-x:hidden; padding-top:160px;}
 
 	@keyframes scroll{
 	0%{transform:translateX(0);}
-	100%{transform:translateX(calc(-350px * 6));}
+	100%{transform:translateX(calc(-350px * 8));}
 	}
 
 	/* MOBILE */
