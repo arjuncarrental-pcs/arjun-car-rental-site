@@ -152,7 +152,3 @@ body{background:#f5f7ff; overflow-x:hidden; padding-top:160px;}
 	.visitor-box h3{color:#fff;	margin-bottom:15px;	font-size:24px;}
 	.visitor-box img{max-width:100%; border-radius:10px;}
 	}
-		
-/* payment */
-	
-	.payment-btn{bottom:170px; background:#4caf50; font-size:30px; font-weight:700;}
