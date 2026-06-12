@@ -544,6 +544,7 @@ UPI ID:
 	closePreview();
 	closeSchoolPreview();
 	closeAttachPreview();
+	closeMenu();
 	}
 	});
 
