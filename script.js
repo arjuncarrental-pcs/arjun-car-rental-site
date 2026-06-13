@@ -13,21 +13,9 @@
 	const addPlaceBox = document.getElementById('addPlaceBox');
 	const hourlyRentalBox = document.getElementById('hourlyRentalBox');
 		serviceType.addEventListener('change',()=>{
-			if(serviceType.value === 'Outstation'){
-				outstationTypeBox.style.display='block';
-				addPlaceBox.style.display='block';
-				hourlyRentalBox.style.display='none';
-			}
-			else if(serviceType.value === 'Local'){
-				outstationTypeBox.style.display='none';
-				addPlaceBox.style.display='none';
-				hourlyRentalBox.style.display='block';
-			}
-			else{
-				outstationTypeBox.style.display='none';
-				addPlaceBox.style.display='none';
-				hourlyRentalBox.style.display='none';
-			}
+			if(serviceType.value === 'Outstation'){outstationTypeBox.style.display='block'; addPlaceBox.style.display='block'; hourlyRentalBox.style.display='none';}
+			else if(serviceType.value === 'Local'){outstationTypeBox.style.display='none'; addPlaceBox.style.display='none'; hourlyRentalBox.style.display='block';}
+			else{outstationTypeBox.style.display='none'; addPlaceBox.style.display='none'; hourlyRentalBox.style.display='none';}
 	});
 
 	/* INITIAL LOAD FIX */
@@ -278,18 +266,6 @@
 	confirmBooking();
 	}
 	
-	message += `
-
-💳 ADVANCE PAYMENT
-
-Please scan the QR Code available on our website.
-
-UPI ID:
-9123842782@okbizaxis
-
-📲 After payment send screenshot on WhatsApp:
-9007350757
-`;
 
 	/* SCHOOL POOL SERVICE */
 
