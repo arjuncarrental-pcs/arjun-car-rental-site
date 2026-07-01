@@ -1,0 +1,5 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: https://arjuncarrental-pcs.github.io/arjun-car-rental-site/sitemap.xml
