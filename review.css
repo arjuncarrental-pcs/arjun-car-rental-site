@@ -73,14 +73,21 @@ body{
 }
 
 .review-btn{
-    display:inline-block;
-    padding:18px 35px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    max-width:420px;
+    margin:0 auto;
+    padding:18px 25px;
     background:#FFD700;
     color:#111;
     text-decoration:none;
     font-weight:700;
+    font-size:18px;
     border-radius:50px;
-    transition:.3s;
+    transition:0.3s;
+    box-shadow:0 10px 25px rgba(255,215,0,.35);
 }
 
 .review-btn:hover{
@@ -121,6 +128,8 @@ body{
 
 .review-btn{
     width:100%;
+    max-width:100%;
+    font-size:16px;
 }
 }
 .action-buttons{
