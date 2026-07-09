@@ -156,3 +156,12 @@ body{
 .action-buttons a:hover{
     transform:translateY(-3px);
 }
+
+.glow{
+    transform:scale(1.08);
+    transition:.4s;
+    text-shadow:
+    0 0 10px #FFD700,
+    0 0 20px #FFD700,
+    0 0 30px #FFD700;
+}
