@@ -123,3 +123,36 @@ body{
     width:100%;
 }
 }
+.action-buttons{
+    margin-top:30px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.action-buttons a{
+    text-decoration:none;
+    padding:16px;
+    border-radius:50px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.call-btn{
+    background:#ff9800;
+    color:#fff;
+}
+
+.wa-btn{
+    background:#25D366;
+    color:#fff;
+}
+
+.website-btn{
+    background:#333;
+    color:#fff;
+}
+
+.action-buttons a:hover{
+    transform:translateY(-3px);
+}
