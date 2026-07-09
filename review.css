@@ -77,14 +77,14 @@ body{
     align-items:center;
     justify-content:center;
     width:100%;
-    max-width:420px;
-    margin:0 auto;
-    padding:18px 25px;
+    max-width:600px;
+    margin:25px auto;
+    padding:18px 30px;
     background:#FFD700;
     color:#111;
     text-decoration:none;
     font-weight:700;
-    font-size:18px;
+    font-size:20px;
     border-radius:50px;
     transition:0.3s;
     box-shadow:0 10px 25px rgba(255,215,0,.35);
