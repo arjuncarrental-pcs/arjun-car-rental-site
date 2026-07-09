@@ -1,0 +1,125 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0f0f0f;
+    color:#fff;
+    min-height:100vh;
+}
+
+.review-page{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:30px;
+}
+
+.hero{
+    width:100%;
+    max-width:700px;
+    background:#1a1a1a;
+    border-radius:25px;
+    padding:50px 35px;
+    text-align:center;
+    box-shadow:0 20px 60px rgba(0,0,0,.45);
+    border:2px solid #d4af37;
+}
+
+.logo{
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    border:5px solid #d4af37;
+    object-fit:cover;
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-size:36px;
+    color:#FFD700;
+    font-weight:800;
+}
+
+.hero h2{
+    margin-top:8px;
+    color:#ffffff;
+    font-size:18px;
+    font-weight:500;
+}
+
+.stars{
+    font-size:42px;
+    color:#FFD700;
+    margin:30px 0 15px;
+    letter-spacing:6px;
+}
+
+.thanks{
+    font-size:28px;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.message{
+    color:#cccccc;
+    line-height:1.8;
+    font-size:17px;
+    margin-bottom:35px;
+}
+
+.review-btn{
+    display:inline-block;
+    padding:18px 35px;
+    background:#FFD700;
+    color:#111;
+    text-decoration:none;
+    font-weight:700;
+    border-radius:50px;
+    transition:.3s;
+}
+
+.review-btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 30px rgba(255,215,0,.35);
+}
+
+@media(max-width:768px){
+
+.hero{
+    padding:35px 20px;
+}
+
+.hero h1{
+    font-size:28px;
+}
+
+.hero h2{
+    font-size:16px;
+}
+
+.stars{
+    font-size:30px;
+}
+
+.thanks{
+    font-size:22px;
+}
+
+.message{
+    font-size:15px;
+}
+
+.logo{
+    width:100px;
+    height:100px;
+}
+
+.review-btn{
+    width:100%;
+}
+}
