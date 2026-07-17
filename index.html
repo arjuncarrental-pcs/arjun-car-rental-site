@@ -270,7 +270,7 @@
   <!-- BOOK RIDE -->
 
 		<div class="form-box active" id="ride">
-			<form>
+			<form id="rideBookingForm">
 				<div class="form-grid">
 					<div class="input-box">
 						<label>Service Type</label>
@@ -298,11 +298,11 @@
 					</div>
 					<div class="input-box">
 						<label>Pickup Location</label>
-						<input type="text" id="pickupLocation" required>
+						<input type="text" placeholder="Enter Pickup Location" id="pickupLocation" required>
 					</div>
 					<div class="input-box">
 						<label>Destination</label>
-						<input type="text" id="destination">
+						<input type="text" placeholder="Enter Destination" id="destination">
 					</div>
 					<div class="input-box" id="addPlaceBox">
 						<label>Add More Places</label>
@@ -310,7 +310,7 @@
 					</div>
 					<div class="input-box">
 						<label>No. of Passengers</label>
-						<input type="number" id="passengerCount" min="1" max="40" required>
+						<input type="number" placeholder="Enter No. of Passenger" id="passengerCount" min="1" max="40" required>
 					</div>
 					<div class="input-box">
 						<label>Car Selection</label>
@@ -320,23 +320,23 @@
 					</div>
 					<div class="input-box">
 						<label>Pickup Date & Time</label>
-						<input type="datetime-local" id="pickupDate" required>
+						<input type="datetime-local" placeholder="Enter Pickup Date & Time" id="pickupDate" required>
 					</div>
 					<div class="input-box" id="returnBox" style="display:none;">
 						<label>Return Date & Time</label>
-						<input type="datetime-local" id="returnDate">
+						<input type="datetime-local"placeholder="Enter Retunrn Date & Time" id="returnDate">
 					</div>
 					<div class="input-box">
 						<label for="customerName">Customer Name</label>
-						<input type="text" id="customerName" autocomplete="name"required>
+						<input type="text" id="customerName" placeholder="Enter Customer Name" autocomplete="name" required>
 					</div>
 					<div class="input-box">
 						<label>Customer Contact Number</label>
-						<input type="tel" id="customerPhone" placeholder="+91" autocomplete="tel"required>
+						<input type="tel" id="customerPhone" placeholder="+91-9876543210" autocomplete="tel" required>
 					</div>
 					<div class="input-box" style="grid-column:1/-1;">
 						<label>Any Other Information</label>
-						<textarea></textarea>
+						<textarea id="rideNote" placeholder="Enter Other Information/Service"></textarea>
 					</div>
 				</div>
 				<div class="btn-group">
@@ -350,49 +350,49 @@
   <!-- SCHOOL -->
 
 		<div class="form-box" id="school">
-			<form>
+			<form id="schoolBookingForm">
 				<div class="form-grid">
 					<div class="input-box">
 						<label>Student Name</label>
-						<input type="text" autocomplete="name"required>
+						<input id="studentName" placeholder="Enter Student Name" type="text" autocomplete="name" required>
 					</div>
 					<div class="input-box">
 						<label>Student Age</label>
-						<input type="number" required>
+						<input type="number" id="studentName" palceholder="Enter Student Age" required>
 					</div>
 					<div class="input-box">
 						<label>Student Grade/Class</label>
-						<input type="text" required>
+						<input type="text" id="studentAge" palceholder="Enter Student Grade" required>
 					</div>
 
 					<div class="input-box">
 						<label>Parent Name</label>
-						<input type="text" autocomplete="name"required>
+						<input id="parentName" type="text" palceholder="Enter Parent Name" autocomplete="name" required>
 					</div>
 
 					<div class="input-box">
 						<label>Parent Contact Number</label>
-						<input type="tel" autocomplete="tel"required>
+						<input type="tel" id="parentPhone" placeholder="+91-9876543210" autocomplete="tel" required>
 					</div>
 
 					<div class="input-box">
 						<label>School Name</label>
-						<input type="text" autocomplete="name"required>
+						<input id="schoolName" type="text" placeholder="Enter School Name" autocomplete="name" required>
 					</div>
 
 					<div class="input-box">
 						<label>Pickup Location</label>
-						<input type="text" required>
+						<input type="text" id="pickupLocation" placeholder="Enter Pickup Location" required>
 					</div>
 
 					<div class="input-box">
 						<label>Pickup Time</label>
-						<input type="time" required>
+						<input type="time" id="pickupTime" placeholder="Enter Pickup Time" required>
 					</div>
 
 					<div class="input-box" style="grid-column:1/-1;">
 						<label>Additional Information</label>
-						<textarea></textarea>
+						<textarea id="schoolNote" placeholder="Enter Additional Information"></textarea>
 					</div>
 				</div>
 				<div class="btn-group">
@@ -406,27 +406,27 @@
   <!-- ATTACH -->
 
 		<div class="form-box" id="attach">
-			<form>
+			<form id="attachCarForm">
 				<div class="form-grid">
 					<div class="input-box">
 						<label>Driver/Owner Name</label>
-						<input type="text" autocomplete="name"required>
+						<input type="text" id="ownerName" placeholder="Enter Driver/Owner Name" autocomplete="name" required>
 					</div>
 					<div class="input-box">
 						<label>Contact Number</label>
-						<input type="tel" autocomplete="tel"required>
+						<input type="tel" id="ownerName" placeholder="+91-9876543210" autocomplete="tel" required>
 					</div>
 					<div class="input-box">
 						<label>Email</label>
-						<input type="email" autocomplete="email">
+						<input type="email" id="ownerEmail" placeholder="Enter Email (Optional)" autocomplete="email">
 					</div>
 					<div class="input-box">
 						<label>Car Company</label>
-						<input type="text" required>
+						<input type="text" id="carName" placeholder="Enter Company Barnd" required>
 					</div>
 					<div class="input-box">
 						<label>Variant/Model</label>
-						<input type="text" required>
+						<input type="text" id="carModel" placeholder="Enter Car Model" required>
 					</div>
 					<div class="input-box">
 						<label>Fuel Type</label>
@@ -440,17 +440,17 @@
 					</div>
 					<div class="input-box">
 						<label>Registration Number</label>
-						<input type="text" required>
+						<input type="text" id="carNumber" placeholder="Enter Car regidtration Number" required>
 					</div>
 
 					<div class="input-box">
 						<label>Garage Location</label>
-						<input type="text" required>
+						<input type="text" id="carGarage" placeholder="Enter Garage Location" required>
 					</div>
 
 					<div class="input-box" style="grid-column:1/-1;">
 						<label>Any Other Information</label>
-						<textarea></textarea>
+						<textarea id="attachNote" placeholder="Eneter Any Other Information"></textarea>
 					</div>
 				</div>
 
