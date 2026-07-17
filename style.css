@@ -434,3 +434,45 @@ textarea{resize:none; height:120px;}
     transform:translateY(-3px);
     box-shadow:0 10px 25px rgba(255,87,34,.35);
 }
+
+.trust-section{
+    background:#fff;
+}
+
+.trust-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+.trust-card{
+    background:#fff;
+    border-radius:22px;
+    padding:35px 25px;
+    text-align:center;
+    border:1px solid rgba(255,152,0,.12);
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    transition:.35s ease;
+}
+
+.trust-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 25px 45px rgba(0,0,0,.15);
+}
+
+.trust-card i{
+    font-size:45px;
+    color:#ff9800;
+    margin-bottom:20px;
+}
+
+.trust-card h3{
+    font-size:22px;
+    margin-bottom:12px;
+    color:#111;
+}
+
+.trust-card p{
+    color:#666;
+    line-height:1.8;
+}
