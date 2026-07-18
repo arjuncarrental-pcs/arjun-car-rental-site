@@ -385,11 +385,11 @@
 					</div>
 					<div class="input-box">
 						<label for="customerName">Customer Name</label>
-						<input type="text" id="customerName" placeholder="Enter Customer Name" autocomplete="name" required>
+						<input type="text" id="customerName" placeholder="Enter Customer Name" autocomplete="name" maxlength="50" pattern="[A-Za-z ]+" required>
 					</div>
 					<div class="input-box">
 						<label>Customer Contact Number</label>
-						<input type="tel" id="customerPhone" placeholder="+91-9876543210" autocomplete="tel" required>
+						<input type="tel" id="customerPhone" placeholder="+91-9876543210" autocomplete="tel" maxlength="10" pattern="[6-9]{1}[0-9]{9}" required>
 					</div>
 					<div class="input-box" style="grid-column:1/-1;">
 						<label>Any Other Information</label>
