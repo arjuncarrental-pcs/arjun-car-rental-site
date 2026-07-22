@@ -265,12 +265,13 @@
 	}
 	confirmBooking();
 	}
-	message += `
-	💳 ADVANCE PAYMENT
-		Please scan the QR Code available on our website.
-		UPI ID:	9123842782@okbizaxis
-		📲 After payment send screenshot on WhatsApp: 9007350757
-	`;
+	function sendWhatsApp(){
+    if(!validateBookingForm()){
+        return;
+    }
+
+    confirmBooking();
+}
 
 	/* SCHOOL POOL SERVICE */
 
@@ -576,13 +577,15 @@
 	.replace(/'/g,"&#039;");
 	}
 
-document.querySelectorAll(".faq-question").forEach(btn => {
+/* FAQ ACCORDION */
 
-    btn.addEventListener("click", () => {
+document.querySelectorAll(".faq-question").forEach(function(btn){
 
-        const item = btn.parentElement;
+    btn.addEventListener("click", function(){
 
-        item.classList.toggle("active");
+        const faqItem = this.closest(".faq-item");
+
+        faqItem.classList.toggle("active");
 
     });
 
